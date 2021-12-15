@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+%set -ex
+
+%addpath(genpath('.')); CSSP_SensitivityAnalysis;Searchbehavior;Indicators_evaluate;MaF_indicator_evaluation
+%addpath(genpath('.'));CSSP_SensitivityAnalysis;%生成四个折现图
+%addpath(genpath('.'));Searchbehavior;%生成箱型图
+%addpath(genpath('.'));Indicators_evaluate;%生成四个表格
+%addpath(genpath('.'));Indicators_evaluate_draw;%生成四个散点图
+%addpath(genpath('.'));MaF_indicator_evaluation;%生成两个秩和检测条形图和两个表MaF_HV.csv和MaF_IGD.csv
+%addpath(genpath('.'));Searchbehavior;Indicators_evaluate;Indicators_evaluate_draw;CSSP_SensitivityAnalysis;
+
+# addpath向搜索路径中添加文件夹 genpath(folderName) 返回一个包含路径名称的字符向量，该路径名称中包含 folderName 以及 folderName 下的多级子文件夹
+%matlab -nodisplay -r "addpath(genpath('.')); CSSP_SensitivityAnalysis;Searchbehavior;Indicators_evaluate;MaF_indicator_evaluation"
+
